@@ -1,0 +1,13 @@
+{% extends 'word/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{ form.word|as_crispy_field }}
+        {{ form.meaning|as_crispy_field }}
+        {{ form.sentance|as_crispy_field }}
+        <button type="submit" class="btn btn-success">Add Word</button>
+        <a href="{% url 'home' %}" class="btn btn-warning">Back to home</a>
+    </form>
+{% endblock content %}

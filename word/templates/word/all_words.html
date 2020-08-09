@@ -1,0 +1,44 @@
+{% extends 'word/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+    
+
+    <table id="word" class="table table-hover">
+        <thead>
+            <tr>
+                <th>Word</th>
+                <th>Meaning</th>
+                <th>Sentance</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for word in words %}
+                <tr>
+                    <td>{{word.word}}</td>
+                    <td>{{word.meaning}}</td>
+                    <td>{{word.sentance}}</td>
+                    <td>
+                        <a href="{% url 'detail-word' word.pk %}" class="btn btn-sm btn-warning">View</a>
+                        <a href="{% url 'update-word' word.pk %}" class="btn btn-sm btn-info">Update</a>
+                        <a href="{% url 'delete-word' word.pk %}" class="btn btn-sm btn-danger">Delete</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>Word</th>
+                <th>Meaning</th>
+                <th>Sentance</th>
+                <th>Action</th>
+            </tr>
+        </tfoot>
+    </table>
+
+    <a href="{% url 'create-word' %}" class="btn btn-success mt-3">Add new Word</a>
+    <a href="{% url 'home' %}" class="btn btn-warning mt-1">Back to home</a>
+
+{% endblock content %}
+

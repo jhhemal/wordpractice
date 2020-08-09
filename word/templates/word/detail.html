@@ -1,0 +1,14 @@
+{% extends 'word/base.html' %}
+
+{% block content %}
+    <div class="text-center">
+        <h5>{{ word.word }}</h5>
+        <p>{{ word.meaning }}</p>
+        <h6>{{ word.sentance }}</h6>
+    </div>
+    <p class="text-center mt-3">
+        <a href="{% url 'update-word' word.pk %}" class="btn btn-success">Update Word</a>
+        <a href="{% url 'update-word' word.pk %}" class="btn btn-danger">Delete Word</a>
+        <a href="{% url 'home' %}" class="btn btn-warning">Back to home</a>
+    </p>
+{% endblock content %}
