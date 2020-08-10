@@ -27,7 +27,7 @@ SECRET_KEY = 'h7kbjr*=x4qqj6p7g^!j1y*z4j59#!1r03i0%o3_-1b9_11l^)'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['wordpractice.herokuapp.com']
 
 
 # Application definition
