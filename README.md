@@ -7,8 +7,8 @@
 4. Activate Virtual Environment `source venv/bin/activate`
 5. Install Requirements Package `pip install -r requirements.txt`
 6. Migrate Database `python manage.py migrate`
-7. Create Super User `~~python manage.py createsuperuser~~` 
+7. Create Super User ~~`python manage.py createsuperuser`~~ 
 8. Finally Run The Project `python manage.py runserver`
 
 ## Simple Demo
-!(wordpractice.png)
+![1](wordpractice.png)
