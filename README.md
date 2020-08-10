@@ -11,4 +11,4 @@
 8. Finally Run The Project `python manage.py runserver`
 
 ## Simple Demo
-!(wordpractice.png)
+![1](wordpractice.png)
